@@ -167,7 +167,7 @@ HPBars.BossIgnoreList = {
 		return string.find(entity:GetSprite():GetAnimation(), "Stun")
 	end,
 	["905.0"] = function(entity) -- Heretic (fading dummy)
-		return entity.SpawnerEntity ~= nil
+		return entity.SpawnerEntity ~= nil and entity.SpawnerEntity.Type == EntityType.ENTITY_HERETIC
 	end,
 	["906.1"] = true, -- hornfel decoy
 	["907.0"] = true, -- Gideon (will be handled by the game itself)
